@@ -5,6 +5,6 @@
     "dockerargs": "--rm",
     "command": "echo 'Trigger for sample app...'",
     "image": "alpine:latest",
-    "trigger": [{ "command": "echo 'hello you'", "container": "crontab-sample-app" }]
+    "trigger": [{ "command": "echo 'hello you'", "container": "jni-crontab-sample-app" }]
   }
 }

@@ -1,16 +1,16 @@
 services:
-  sample-app-test:
-    container_name: crontab-sample-app
+  jni-crontab-sample-app:
+    container_name: jni-crontab-sample-app
     image: alpine:latest
     restart: unless-stopped
     command: sh -c "while :; do sleep 1; done"
 
   cron:
-    container_name: docker-crontab
-    image: docker-crontab
+    container_name: jni-docker-crontab
+    image: jni-docker-crontab
     restart: always
     depends_on:
-      - sample-app-test
+      - jni-crontab-sample-app
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ${PWD}/docker-crontab-config.json:/opt/crontab/config.json:rw
