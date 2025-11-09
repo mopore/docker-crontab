@@ -1,11 +1,16 @@
 # docker-crontab
 
 A simple wrapper over `docker` to all complex cron job to be run in other containers.
+This project is forked from https://github.com/willfarrell/docker-crontab to provide additional 
+features.
+This project now:
+- Runs also on Apple Silicon (ARM64)
+- Uses the latest Alpine image
 
 ## Quick Setup (from JNI)
 Create the image:
 ```shields
-docker buildx build --load -t docker-crontab .
+docker buildx build --load -t jni-docker-crontab .
 ```
 
 Check the example in `docker_compose_example` for a simple hello example.
