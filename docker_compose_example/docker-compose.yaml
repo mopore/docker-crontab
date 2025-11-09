@@ -13,4 +13,4 @@ services:
       - jni-crontab-sample-app
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ${PWD}/docker-crontab-config.json:/opt/crontab/config.json:rw
+      - ${PWD}/jni-docker-crontab-config.json:/opt/crontab/config.json:rw
